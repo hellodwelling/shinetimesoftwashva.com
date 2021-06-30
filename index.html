@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Shine Time Softwash" property="og:title">
+    <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@1.2.x/dist/index.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
         
     
     
@@ -322,32 +324,6 @@
                     <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
                         
                         <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
-                            <h3 class="box-border text-xl font-bold leading-none tracking-wider border-solid text-gray-400  ">Window Cleaning</h3>
-                            <p
-                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
-                                Beautiful windows so clean you will be able to see your reflection. Streak-free, polished, and shining - we deliver the highest quality.
-                            </p>
-                        </div>
-                    </div>
-                </div>        
-                    
-                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
-                            <h3 class="box-border text-xl font-bold leading-none tracking-wider border-solid text-gray-400  ">Fleet Washing</h3>
-                            <p
-                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
-                                Vehicles, equipment, and more, we'll have them cleaned and looking better than ever before.
-                            </p>
-                        </div>
-                    </div>
-                </div>        
-                    
-                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
                             <h3 class="box-border text-xl font-bold leading-none tracking-wider border-solid text-gray-400  ">Painting Preparation</h3>
                             <p
                                 class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
@@ -391,6 +367,32 @@
                             <p
                                 class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
                                 Not only should your fence keep your property safe but it is also one of the first things that people see. We will help it look new again!
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        
+                        <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
+                            <h3 class="box-border text-xl font-bold leading-none tracking-wider border-solid text-gray-400  ">Window Cleaning</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
+                                Beautiful windows so clean you will be able to see your reflection. Streak-free, polished, and shining - we deliver the highest quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        
+                        <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
+                            <h3 class="box-border text-xl font-bold leading-none tracking-wider border-solid text-gray-400  ">Fleet Washing</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
+                                Vehicles, equipment, and more, we'll have them cleaned and looking better than ever before.
                             </p>
                         </div>
                     </div>
@@ -457,73 +459,74 @@
             <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                 <h1 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h1>
                 <h2 class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">See why our customers love us</h2>
-                <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false }" @keydown.escape= "open = false"   >
+                <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0 }" @keydown.escape= "open = false"   >
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg"  alt = "Photo number 1 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg"  alt = "Photo number 1 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg"  alt = "Photo number 2 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg"  alt = "Photo number 2 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg"  alt = "Photo number 3 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg"  alt = "Photo number 3 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg"  alt = "Photo number 4 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg"  alt = "Photo number 4 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg"  alt = "Photo number 5 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg"  alt = "Photo number 5 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg"  alt = "Photo number 6 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg"  alt = "Photo number 6 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg"  alt = "Photo number 7 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg"  alt = "Photo number 7 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg"  alt = "Photo number 8 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg"  alt = "Photo number 8 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="open = true" ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg"  alt = "Photo number 9 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg"  alt = "Photo number 9 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                      
                                         
             
                     <div class=" z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center" x-show.transition="open" @click.away="open = false" >
+
+
                     
                     
                         <div class="flex items-center justify-start w-12 m-2 ml-6 mb-4 md:m-2 z-50 absolute bottom-0 transform translate-x-12 md:translate-x-32">
                         <button
-                                class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-opacity-75 bg-white"
-                                
+                                class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-opacity-75 bg-white"                                
                                 @click="open = false">
                              <span class = "text-black"> <i class="fas fa-lg fa-times"></i> </span>
                         </button>
                         </div>
 
-                        <div class= "h-90 w-90 flex items-center justify-center overflow-hidden" x-data="{activeSlide: 0, slides: [   [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg', 'photo'],   ]}">
+                        <div class= "h-90 w-90 flex items-center justify-center overflow-hidden" x-data="{ slides: [   [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg', 'photo'],   ]}">
 
                             <template  x-for="(slide, index, collection) in slides" :key="index">
                                 <div class="h-full w-full flex items-center justify-center absolute">
                                     <div class="absolute top-0 bottom-0 py-2  px-2 flex flex-col items-center justify-center"
-                                        x-show="activeSlide === index" 
+                                        x-show="$parent.activeSlide === index" 
                                         x-transition:enter="transition ease-out duration-150"
                                         x-transition:enter-start="opacity-0 transform scale-90"
                                         x-transition:enter-end="opacity-100 transform scale-100"
@@ -534,6 +537,7 @@
                                         <template x-if="slide[1] === 'photo' ">
                                             <img :src="slide[0]" class="object-contain max-w-full max-h-full rounded shadow-lg" />
                                         </template>
+                                        
                                         <template x-if="slide[1] != 'photo'  ">
                                             <video class="object-contain max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
                                             </video>
@@ -541,7 +545,7 @@
                                         
                                     </div>
                                     <div class="fixed text-white text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
-                                        x-show="activeSlide === index">
+                                        x-show="$parent.activeSlide === index">
                                         <span class="w-12 text-right" x-text="index + 1"></span>
                                         <span class="w-4 text-center">/</span>
                                         <span class="w-12 text-left" x-text="slides.length"></span>
@@ -555,7 +559,7 @@
                                     type="button"
                                     class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-opacity-75 bg-white  " 
                                    
-                                    @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
+                                    @click="$parent.activeSlide = $parent.activeSlide === 0 ? slides.length - 1 : $parent.activeSlide - 1">
                                     <span class = "text-black"> <i class="fas fa-lg fa-chevron-left"></i> </span>
                                
                             </button>
@@ -565,7 +569,7 @@
                                     type="button"
                                     class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-opacity-75 bg-white   "
                                    
-                                    @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
+                                    @click="$parent.activeSlide = $parent.activeSlide === slides.length - 1 ? 0 : $parent.activeSlide + 1">
                                <span class = "text-black"> <i class="fas fa-lg fa-chevron-right"></i> </span>
                             </button>
                             </div>
@@ -622,6 +626,35 @@
                                 
                             </div>
                             <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"They were very professional. They did such an awesome job -- would definitely recommend."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Tracey Herndon</h3>
+                            <h3 class=" text-white ">Gloucester, VA  , Decks &amp; Patios  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Love Shine Time softwash. Very professional, timely, thorough, and did an amazing job on my house as well as decks. Highly recommend❤️"</blockquote>                           
                         </div>
                     </div>
                     
@@ -756,7 +789,7 @@
         </div>
     </div>
 </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+
 
 </body>
 </html>
