@@ -570,51 +570,81 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
             <h2 class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">See why our customers love us</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/3CISK9XQYS56IV86K3GEJGME1Z4DHMXKA0A63WAK.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/IMTMO5YJ3GYH4RA3OMKAOSJKEQ4OLZZ9PFHFWT1F.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/D8RVU25PWHHWPR9SB4B9ZMQP2TLH76XK18EFKWOJ.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/IIVT4DVE3S4X7GTS4DJ5F7W92IU03MT3X5M3PQBJ.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/PGJQ4196TOK1IBOT0U9RMFXE96PZATH1L4V38T1P.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/QSTXWMZYM9ZRXZ8VTZBW101O72V70GGW8Y2ESO37.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg"  alt = "Photo number 1 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3CISK9XQYS56IV86K3GEJGME1Z4DHMXKA0A63WAK.jpeg"  alt = "Photo number 1 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg"  alt = "Photo number 2 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/IMTMO5YJ3GYH4RA3OMKAOSJKEQ4OLZZ9PFHFWT1F.jpeg"  alt = "Photo number 2 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg"  alt = "Photo number 3 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/D8RVU25PWHHWPR9SB4B9ZMQP2TLH76XK18EFKWOJ.jpeg"  alt = "Photo number 3 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg"  alt = "Photo number 4 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/IIVT4DVE3S4X7GTS4DJ5F7W92IU03MT3X5M3PQBJ.jpeg"  alt = "Photo number 4 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg"  alt = "Photo number 5 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PGJQ4196TOK1IBOT0U9RMFXE96PZATH1L4V38T1P.jpeg"  alt = "Photo number 5 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg"  alt = "Photo number 6 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/QSTXWMZYM9ZRXZ8VTZBW101O72V70GGW8Y2ESO37.jpeg"  alt = "Photo number 6 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg"  alt = "Photo number 7 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WKI21LOJYI8DJGQ5AVDF51SFH5NKNQ7U12LRWR6B.jpeg"  alt = "Photo number 7 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg"  alt = "Photo number 8 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/L8TVWQN3TRM188ADXPEG1A4KU6CRGRO7QLN35BIK.jpeg"  alt = "Photo number 8 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                                     
                         
                               
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg"  alt = "Photo number 9 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/X9YKB45SFJQFIUWCLTMRI4DT17R2ZH4XRA07Q3TA.jpeg"  alt = "Photo number 9 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/LJLD8CY4X3CGKYC1O1WMP5UMLOQ7TPMNDA4TXKJL.jpeg"  alt = "Photo number 10 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/J9ZL9HA8JJX85MSW503SGB7BCBTWA2PIMX7TM9XM.jpeg"  alt = "Photo number 11 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/A4GWA9N0CZ6PR6SJU5PKFZMJ4H1LKQ7BHIR7YZY0.jpeg"  alt = "Photo number 12 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/WUA8ZHZK1107F04WUG140Y39S4Y2WCY1KGW32AVW.jpeg"  alt = "Photo number 13 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CMXYG6VL4AAN7NFGKCFISBCBVS5F9RRMVA38DNUB.jpeg"  alt = "Photo number 14 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 14; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/T5WWA7Y4S35DAZ6GDCLOBPK23VCXHHOVVVZHHKKW.jpeg"  alt = "Photo number 15 of Shine Time Softwash&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                  
                                     
